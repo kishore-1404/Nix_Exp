@@ -5,7 +5,7 @@
     enable = true;
     font = {
       name = "FiraCode Nerd Font";
-      size = 10;
+      size = 11;
     };
     # Other kitty settings
   };
