@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./fish.nix
+        # ./fish.nix
         ./kitty.nix
         ./starship.nix
     ];
