@@ -1,93 +1,93 @@
 # starship.toml
 
 # Global configuration
-format = "$username$hostname$directory$git_branch$git_status$cmd_duration$line_break$character"
+format = '$username$hostname$directory$git_branch$git_status$cmd_duration$line_break$character'
 
 # Show command duration even for short commands (in milliseconds)
 [cmd_duration]
 min_time = 0           # Show duration for all commands, even below 10ms
-format = "[⏱ $durationms]($style) "  # Display in milliseconds with 'ms' suffix
-style = "yellow bold"
+format = '[⏱ $durationms]($style) '  # Display in milliseconds with 'ms' suffix
+style = 'yellow bold'
 
 # Directory configuration with truncation for better readability
 [directory]
 truncation_length = 3    # Show last 3 directory components
 truncate_to_repo = true  # Truncate to git repo root if in a repo
-format = "[$path]($style) "
-style = "cyan bold"
-read_only = "🔒"
-read_only_style = "red"
+format = '[$path]($style) '
+style = 'cyan bold'
+read_only = '🔒'
+read_only_style = 'red'
 
 # Username with root/admin detection
 [username]
 show_always = true
-format = "[$user]($style)@"
-style_user = "green bold"
-style_root = "red bold"
+format = '[$user]($style)@'
+style_user = 'green bold'
+style_root = 'red bold'
 
 # Hostname
 [hostname]
 ssh_only = false
-format = "[$hostname]($style)"
-style = "green bold"
+format = '[$hostname]($style)'
+style = 'green bold'
 
 # Git branch
 [git_branch]
-symbol = "🌿 "
-format = "[$symbol$branch]($style) "
-style = "purple bold"
+symbol = '🌿 '
+format = '[$symbol$branch]($style) '
+style = 'purple bold'
 
 # Git status with detailed indicators
 [git_status]
 format = '([$all_status$ahead_behind]($style) )'
-style = "red"
-conflicted = "🏳"
-ahead = "⇡"
-behind = "⇣"
-diverged = "⇕"
-untracked = "?"
-staged = "✚"
-modified = "!"
-deleted = "✖"
-renamed = "»"
-stashed = "📦"
+style = 'red'
+conflicted = '🏳'
+ahead = '⇡'
+behind = '⇣'
+diverged = '⇕'
+untracked = '?'
+staged = '✚'
+modified = '!'
+deleted = '✖'
+renamed = '»'
+stashed = '📦'
 
 # Character (prompt symbol)
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[✗](bold red)"
+success_symbol = '[➜](bold green)'
+error_symbol = '[✗](bold red)'
 
 # Add some commonly used language/tool indicators
 [nodejs]
-symbol = "⬢ "
-format = "[$symbol$version]($style) "
-style = "green bold"
+symbol = '⬢ '
+format = '[$symbol$version]($style) '
+style = 'green bold'
 
 [python]
-symbol = "🐍 "
-format = "[${symbol}${pyenv_prefix}${version}( \($virtualenv\))]($style) "
-style = "yellow bold"
+symbol = '🐍 '
+format = '[${symbol}${pyenv_prefix}${version}( \($virtualenv\))]($style) '
+style = 'yellow bold'
 
 [rust]
-symbol = "🦀 "
-format = "[$symbol$version]($style) "
-style = "red bold"
+symbol = '🦀 '
+format = '[$symbol$version]($style) '
+style = 'red bold'
 
 [golang]
-symbol = "🐹 "
-format = "[$symbol$version]($style) "
-style = "blue bold"
+symbol = '🐹 '
+format = '[$symbol$version]($style) '
+style = 'blue bold'
 
 # Time (optional - comment out if not needed)
 [time]
 disabled = false
-format = "[$time]($style) "
-style = "purple"
-time_format = "%R"  # 24-hour format (HH:MM)
+format = '[$time]($style) '
+style = 'purple'
+time_format = '%R'  # 24-hour format (HH:MM)
 
 # Memory usage (optional - comment out if not needed)
 [memory_usage]
 disabled = true    # Disabled by default - enable if needed
 threshold = 75     # Show when usage exceeds 75%
-format = "[$symbol[$ram]]($style) "
-style = "white bold"
+format = '[$symbol[$ram]]($style) '
+style = 'white bold'
