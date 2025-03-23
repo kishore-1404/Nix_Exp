@@ -46,6 +46,9 @@
   # Enable supergfxd for hybrid graphics management
   services.supergfxd.enable = true;
 
+  # Explicitly disable power-profiles-daemon
+  services.power-profiles-daemon.enable = false;
+
   services.tlp = {
       enable = true;
       settings = {
@@ -54,7 +57,7 @@
        STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
       };
   };
-  
+
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
     battery = {
