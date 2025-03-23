@@ -46,8 +46,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   	# Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  	inputs.home-manager.packages.${pkgs.system}.default 
-    supergfxctl
+  	inputs.home-manager.packages.${pkgs.system}.default  #Home Manager
+    supergfxctl #GPU Switching
+    auto-cpufreq #CPU Frequency Scaling
+    tlp #Battery Thresholds
     wget
     neovim
     fish

@@ -8,7 +8,7 @@
   # Enable the KDE Plasma Desktop Environment.
   # services.displayManager.sddm.wayland.enable = true; # For ruunning sddm Wayland
   services.displayManager.sddm.enable = true;
-    services.displayManager.sddm.autoNumlock = true;  # Enable NumLock at login
+  services.displayManager.sddm.autoNumlock = true;  # Enable NumLock at login
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
@@ -45,4 +45,25 @@
   
   # Enable supergfxd for hybrid graphics management
   services.supergfxd.enable = true;
+
+  services.tlp = {
+      enable = true;
+      settings = {
+       #Optional helps save long term battery health
+       START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+       STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+      };
+  };
+  
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+    charger = {
+      governor = "performance";
+      turbo = "auto";
+    };
+  };
 }
