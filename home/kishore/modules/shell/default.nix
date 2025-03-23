@@ -6,6 +6,4 @@
         ./kitty.nix
         ./starship.nix
     ];
-
-    # Additional shell configurations can go here
 }
