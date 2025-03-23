@@ -8,6 +8,7 @@
   # Enable the KDE Plasma Desktop Environment.
   # services.displayManager.sddm.wayland.enable = true; # For ruunning sddm Wayland
   services.displayManager.sddm.enable = true;
+    services.displayManager.sddm.autoNumlock = true;  # Enable NumLock at login
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11

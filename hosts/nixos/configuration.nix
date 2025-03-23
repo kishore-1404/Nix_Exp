@@ -8,10 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./nvidia.nix
       ./modules/boot.nix
       ./modules/networking.nix
       ./modules/localization.nix
       ./modules/services.nix
+
     ];
 
   programs.fish.enable = true;

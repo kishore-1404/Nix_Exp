@@ -1,3 +1,5 @@
+right_format = """$cmd_duration"""
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
@@ -203,5 +205,4 @@ format = '[$path]($style) '
 style = 'cyan bold'
 read_only = '🔒'
 read_only_style = 'red'
-
 
