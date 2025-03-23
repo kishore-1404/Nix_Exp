@@ -42,5 +42,7 @@
   # # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = false;
   services.xserver.displayManager.autoLogin.user = "kishore";
-
+  
+  # Enable supergfxd for hybrid graphics management
+  services.supergfxd.enable = true;
 }
