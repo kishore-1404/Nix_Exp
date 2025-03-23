@@ -10,6 +10,7 @@
   # Import all the modules
   imports = [
     ./modules/packages.nix # Install packages
+    ./modules/shell        # Shell configuration
     # ./modules/shell.nix
     # ./modules/terminal.nix
     # Add more modules as you create them
