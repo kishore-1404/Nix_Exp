@@ -205,5 +205,3 @@ read_only = '🔒'
 read_only_style = 'red'
 
 
-
-right_format = """$cmd_duration"""
