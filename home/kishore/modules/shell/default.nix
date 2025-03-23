@@ -2,8 +2,8 @@
 
 {
     imports = [
-        ./fish.nix
-        ./kitty.nix
+        # ./fish.nix
+        # ./kitty.nix
         ./starship.nix
     ];
 
