@@ -1,6 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    ./dev
+  ];
   home.packages = with pkgs; [
     neofetch
     btop  # replacement of htop/nmon
