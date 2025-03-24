@@ -50,6 +50,12 @@
     supergfxctl #GPU Switching
     auto-cpufreq #CPU Frequency Scaling
     tlp #Battery Thresholds
+
+    bluez                         # Bluetooth support
+    bluez-tools                   # Command line tools
+    blueman                       # GUI Bluetooth manager
+
+    
     wget
     neovim
     fish
@@ -57,6 +63,16 @@
     kitty
     git
     gh
+
+    pyenv
+    python3
+    python3Packages.pip
+    python3Packages.virtualenv
+
+    gcc
+    gdb
+    cmake
+    jdk
   ];
 
   # Add Fish to allowed shells list
