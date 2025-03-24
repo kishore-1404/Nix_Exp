@@ -35,6 +35,21 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+  # Bluetooth configuration
+  hardware.bluetooth = {
+    enable = true;                # Already in your hardware-configuration.nix
+    powerOnBoot = true;           # Power up Bluetooth adapter on boot
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket"; # Enable A2DP profiles
+        Experimental = true;                # Enable experimental features
+      };
+    };
+  };
+  # Enable the Bluetooth service
+  services.blueman.enable = true;  # Optional: Enables the Blueman Bluetooth manager
+
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
